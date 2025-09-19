@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şeyma TANOĞLU - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .modal {
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: transform 0.2s ease-in-out;
+        }
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal.open .modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Header/Hero Section -->
+        <header class="text-center py-16 px-6 bg-white rounded-3xl shadow-lg mb-12">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4">Şeyma TANOĞLU</h1>
+            <p class="text-xl md:text-2xl text-gray-600 font-medium mb-6">Expert Mobile Application Developer</p>
+            
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about" class="bg-white p-8 md:p-12 rounded-3xl shadow-lg mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-gray-200 pb-2">About Me</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                With over 18 years of experience in software development,
+                 I specialize in native iOS and Android applications, with a particular focus on Java/Kotlin and Objective-C/Swift. 
+                 Throughout my career, I've contributed to various business domains, including e-commerce, cloud-based applications, 
+                 and enterprise software solutions.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                I am a solution-oriented professional who easily adapts to new projects and is always eager to learn new technologies. 
+                I enjoy participating in the analysis and design phases, providing support, and proactively recommending optimal changes to ensure project success. 
+                My ability to communicate effectively with both technical and non-technical personnel allows me to work seamlessly within diverse teams.
+              </p>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                My technical knowledge also allows me to effectively guide your team, make sound architectural decisions, and communicate with other technical and non-technical stakeholders.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white p-8 md:p-12 rounded-3xl shadow-lg mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-gray-200 pb-2">Skills</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-blue-200 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">iOS Development</span>
+                <span class="bg-green-200 text-green-800 text-sm font-semibold px-4 py-2 rounded-full">Android Development</span>
+                <span class="bg-purple-200 text-purple-800 text-sm font-semibold px-4 py-2 rounded-full">Objective-C</span>
+                <span class="bg-indigo-200 text-indigo-800 text-sm font-semibold px-4 py-2 rounded-full">Swift</span>
+                <span class="bg-yellow-200 text-yellow-800 text-sm font-semibold px-4 py-2 rounded-full">Java</span>
+                <span class="bg-red-200 text-red-800 text-sm font-semibold px-4 py-2 rounded-full">Kotlin</span>
+                <span class="bg-gray-200 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full">Xcode</span>
+                <span class="bg-gray-200 text-gray-800 text-sm font-semibold px-4 py-2 rounded-full">Android Studio</span>
+                <span class="bg-pink-200 text-pink-800 text-sm font-semibold px-4 py-2 rounded-full">REST/JSON/XML</span>
+                <span class="bg-teal-200 text-teal-800 text-sm font-semibold px-4 py-2 rounded-full">Firebase</span>
+                <span class="bg-cyan-200 text-cyan-800 text-sm font-semibold px-4 py-2 rounded-full">SQL/SQLite</span>
+                <span class="bg-fuchsia-200 text-fuchsia-800 text-sm font-semibold px-4 py-2 rounded-full">Git/JIRA/Gitlab</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white p-8 md:p-12 rounded-3xl shadow-lg mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-gray-200 pb-2">Projects</h2>
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+              <!-- Project Card 7: SmartCabin -->
+              <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('SmartCabin',
+               'SmartCabin.pdf', 'An offline application for Pegasus Airlines flight crew that provides access to weekly flight duties, passenger details, and seat maps. The app stores data locally and syncs with the server when an internet connection is available.', [
+              'SmartCabin/1.png',
+          'SmartCabin/2.png',
+          'SmartCabin/3.png',
+          'SmartCabin/4.png',
+          'SmartCabin/5.png',
+          'SmartCabin/6.png',
+          'SmartCabin/7.png'
+          ])">
+              <img src="SmartCabin/1.png" alt="SmartCabin Thumbnail" class="w-full h-48 object-cover">
+              <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">SmartCabin</h3>
+                  <p class="text-gray-700">An offline application for Pegasus Airlines flight crew that provides access to weekly flight duties, passenger details, and seat maps. The app stores data locally and syncs with the server when an internet connection is available.</p>
+              </div>
+          </div>
+
+          <!-- Project Card 8: SmartGo -->
+          <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('SmartGo', 'SmartGo.pdf', 
+          'A live flight schedule application for Pegasus airport crew, enabling users to view and manage real-time flight data.', [
+                 'SmartGo/1.png',
+          'SmartGo/2.png',
+          'SmartGo/3.png',
+          'SmartGo/4.png',
+          'SmartGo/5.png',
+          'SmartGo/6.png',
+          'SmartGo/7.png',
+          'SmartGo/8.png'
+          ])">
+              <img src="SmartGo/1.png" alt="SmartGo Thumbnail" class="w-full h-48 object-cover">
+              <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">SmartGo</h3>
+                  <p class="text-gray-700">A live flight schedule application for Pegasus airport crew, enabling users to view and manage real-time flight data.</p>
+              </div>
+          </div>
+
+
+            <!-- Project Card 5: SymblePay -->
+            <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('SymblePay', 'SymblePay.pdf', 
+            'SymblePay is a secure payment application that facilitates safe online transactions. It acts as an escrow service, holding funds until a buyer confirms the receipt of a product, providing protection for both buyers and sellers.', [
+                  'SymblePay/1.png',
+                'SymblePay/2.png',
+                'SymblePay/3.png',
+                'SymblePay/4.png'
+            ])">
+                <img src="SymblePay/1.png" alt="SymblePay Thumbnail" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">SymblePay</h3>
+                    <p class="text-gray-700">
+                      SymblePay is a secure payment application that facilitates safe online transactions. It acts as an escrow service, holding funds until a buyer confirms the receipt of a product, providing protection for both buyers and sellers.</p>
+                </div>
+            </div>
+          <!-- Project Card 4: BreakPoints4U -->
+          <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" 
+          onclick="openModal('BreakPoints4U', 'BreakPoints.pdf', 
+          'BreakPoints4U is a social application designed to encourage users to take healthy breaks from their work or studies. It connects users with friends, tracks their break habits, and offers rewards from a virtual shop.', [
+          'BreakPoints/1.png',
+          'BreakPoints/2.png',
+          'BreakPoints/3.png',
+          'BreakPoints/4.png',
+          'BreakPoints/5.png'
+          ])">
+              <img src="BreakPoints/1.png" alt="BreakPoints Thumbnail" class="w-full h-48 object-cover">
+              <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">BreakPoints4U</h3>
+                  <p class="text-gray-700">BreakPoints4U is a social application designed to encourage users to take healthy breaks from their work or studies. It connects users with friends, tracks their break habits, and offers rewards from a virtual shop.</p>
+              </div>
+          </div>
+
+           <!-- Project Card 4: SafeBrick -->
+           <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('SafeBrick', 'SafeBrick.pdf', 
+           'SafeBrick is an intelligent drive assist system that provides real-time feedback and configurable settings to improve driving safety and awareness. The application connects to a physical controller and offers a personalized driving experience.', [
+           'SafeBrick/0.jpg',
+           'SafeBrick/1.jpg',
+           'SafeBrick/2.jpg',
+           'SafeBrick/3.jpg'
+          ])">
+              <img src="SafeBrick/0.jpg" alt="SafeBrick Thumbnail" class="w-full h-48 object-cover">
+              <div class="p-6">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">SafeBrick</h3>
+                  <p class="text-gray-700">SafeBrick is an intelligent drive assist system that provides real-time feedback and configurable settings to improve driving safety and awareness. The application connects to a physical controller and offers a personalized driving experience.</p>
+              </div>
+          </div>
+
+                <!-- Project Card 1: FituApp -->
+                <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" 
+                onclick="openModal('FituApp', 'FituApp.pdf', 
+                'Fitu is an intelligent, self-guided virtual personal trainer application designed to help users achieve their fitness goals. The app provides personalized diet plans, customized training programs, and comprehensive progress tracking in an intuitive interface.', [
+                    'FituApp/1.jpeg',
+                    'FituApp/2.jpeg',
+                    'FituApp/3.jpeg',
+                    'FituApp/4.jpeg',
+                    'FituApp/5.jpeg',
+                    'FituApp/6.jpeg',
+                    'FituApp/7.jpeg',
+                    'FituApp/8.jpeg',
+                    'FituApp/9.jpeg',
+                    'FituApp/10.jpeg',
+                ])">
+                    <img src="FituApp/1.jpeg" alt="FituApp Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">FituApp</h3>
+                        <p class="text-gray-700">
+                          Fitu is an intelligent, self-guided virtual personal trainer application designed to help users achieve their fitness goals. The app provides personalized diet plans, customized training programs, and comprehensive progress tracking in an intuitive interface.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: KamilKoç -->
+                <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('KamilKoç', 'KamilKoc.pdf', 'A booking application for a travel agency, featuring seat selection, ticket information, and a customer points system.', [
+                     'KamilKoc/1.jpg',
+                    'KamilKoc/2.jpg',
+                    'KamilKoc/3.jpg',
+                    'KamilKoc/4.png',
+                    'KamilKoc/5.png',
+                    'KamilKoc/6.png',
+                    'KamilKoc/7.png'
+                ])">
+                    <img src="KamilKoc/1.jpg" alt="KamilKoç Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">KamilKoç</h3>
+                        <p class="text-gray-700">A booking application for a travel agency, featuring seat selection, ticket information, and a customer points system.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Pigoons -->
+                <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('Pigoons', 'Pigoons.pdf', 'A peer-to-peer delivery service app that allows users to send and receive packages.', [
+                     'Pigoons/1.webp',
+                     'Pigoons/2.webp',
+                     'Pigoons/3.webp',
+                     'Pigoons/4.webp',
+                     'Pigoons/5.webp'
+                ])">
+                    <img src="Pigoons/1.webp" alt="Pigoons Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Pigoons</h3>
+                        <p class="text-gray-700">A peer-to-peer delivery service app that allows users to send and receive packages.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 6: iGlobal -->
+                <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('iGlobal', 'iGlobal.pdf', 'A corporate mobile solution for managing and confirming various requests such as expenses and vacation requests.', [
+                     'iGlobal/1.png',
+                    'iGlobal/2.png',
+                    'iGlobal/3.png',
+                    'iGlobal/4.png',
+                    'iGlobal/5.gif'
+                ])">
+                    <img src="iGlobal/1.png" alt="iGlobal Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">iGlobal</h3>
+                        <p class="text-gray-700">A corporate mobile solution for managing and confirming various requests such as expenses and vacation requests.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 6: Gboard -->
+                <div class="project-card bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer" onclick="openModal('GBoard', 
+                'GBoard.pdf', 'A mobile application for Turkcell\'s customer service department, Gboard provides key performance indicators (KPIs) and real-time operational data for customer service representatives.', [
+                'Gboard/1.png',
+              'Gboard/2.png',
+              'Gboard/3.png',
+              'Gboard/4.png',
+              'Gboard/5.png',
+              'Gboard/6.png'
+          ])">
+                <img src="Gboard/1.png" alt="Gboard Thumbnail" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">GBoard</h3>
+                    <p class="text-gray-700">A mobile application for Turkcell's customer service department, Gboard provides key performance indicators (KPIs) and real-time operational data for customer service representatives.</p>
+                </div>
+            </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- Modal for Project Screenshots -->
+        <div id="projectModal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 opacity-0 invisible" onclick="closeModal(event)">
+            <div id="modal-content" class="modal-content bg-white rounded-3xl p-6 relative w-full max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl">
+                <button onclick="closeModal(event)" class="absolute top-4 right-4 text-white bg-gray-900 rounded-full h-8 w-8 flex items-center justify-center transition-transform transform hover:scale-110 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="max-h-[85vh] overflow-y-auto">
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-900 mb-2"></h3>
+                    <p id="modal-description" class="text-gray-700 mb-4"></p>
+                    <div id="modal-images-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Images will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white p-8 md:p-12 rounded-3xl shadow-lg mb-12 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-gray-200 pb-2">Contact</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-lg text-gray-700">
+                <a href="mailto:stanoglu@gmail.com" class="hover:underline flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                    </svg>
+                    <span>stanoglu@gmail.com</span>
+                </a>
+                <a href="tel:+905322442272" class="hover:underline flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.5l1.5 5.5-1.5 1.5c-2 2-2 4 0 6s4 2 6 0l1.5-1.5 5.5 1.5V19a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                    </svg>
+                    <span>+90 532 244 2272</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            <p>&copy; 2024 Şeyma TANOĞLU. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Modal functionality
+        const projectModal = document.getElementById('projectModal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImagesContainer = document.getElementById('modal-images-container');
+        const projects = [
+            { name: 'FituApp', description: 'An app for discovering and booking fitness classes, allowing users to find activities near them and filter based on preferences.', screenshots: ['https://placehold.co/400x600/e2e8f0/64748b?text=FituApp+Screen+1', 'https://placehold.co/400x600/e2e8f0/64748b?text=FituApp+Screen+2', 'https://placehold.co/400x600/e2e8f0/64748b?text=FituApp+Screen+3'] },
+            { name: 'KamilKoç', description: 'A booking application for a travel agency, featuring seat selection, ticket information, and a customer points system.', screenshots: ['https://placehold.co/400x600/e2e8f0/64748b?text=KamilKo%C3%A7+Screen+1', 'https://placehold.co/400x600/e2e8f0/64748b?text=KamilKo%C3%A7+Screen+2', 'https://placehold.co/400x600/e2e8f0/64748b?text=KamilKo%C3%A7+Screen+3'] },
+            { name: 'Pigoons', description: 'A peer-to-peer delivery service app that allows users to send and receive packages.', screenshots: ['https://placehold.co/400x600/e2e8f0/64748b?text=Pigoons+Screen+1', 'https://placehold.co/400x600/e2e8f0/64748b?text=Pigoons+Screen+2', 'https://placehold.co/400x600/e2e8f0/64748b?text=Pigoons+Screen+3'] },
+            { name: 'SafeBrick', description: 
+            'SafeBrick is an intelligent drive assist system that provides real-time feedback and configurable settings to improve driving safety and awareness. The application connects to a physical controller and offers a personalized driving experience.', screenshots:
+             ['https://placehold.co/400x600/e2e8f0/64748b?text=SafeBrick+Screen+1', 
+             'https://placehold.co/400x600/e2e8f0/64748b?text=SafeBrick+Screen+2', 
+             'https://placehold.co/400x600/e2e8f0/64748b?text=SafeBrick+Screen+3'] },
+            { name: 'SymblePay', description: 'A secure payment and trade application with features like escrow accounts, track & trace, and buyer/seller protection.', screenshots: ['https://placehold.co/400x600/e2e8f0/64748b?text=SymblePay+Screen+1', 'https://placehold.co/400x600/e2e8f0/64748b?text=SymblePay+Screen+2', 'https://placehold.co/400x600/e2e8f0/64748b?text=SymblePay+Screen+3'] },
+            { name: 'iGlobal', description: 'A corporate mobile solution for managing and confirming various requests such as expenses and vacation requests.', screenshots: ['https://placehold.co/400x600/e2e8f0/64748b?text=iGlobal+Screen+1', 'https://placehold.co/400x600/e2e8f0/64748b?text=iGlobal+Screen+2', 'https://placehold.co/400x600/e2e8f0/64748b?text=iGlobal+Screen+3'] }
+        ];
+
+        function openModal(title, pdf, description, images) {
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalImagesContainer.innerHTML = '';
+            
+            // Generate image elements
+            images.forEach(imgSrc => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imgSrc;
+                imgElement.alt = `${title} Screenshot`;
+                imgElement.className = 'w-full h-auto rounded-xl shadow-md';
+                modalImagesContainer.appendChild(imgElement);
+            });
+            
+            projectModal.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevents scrolling behind the modal
+        }
+
+        function closeModal(event) {
+            // Close modal only if clicking outside the content or on the close button
+            if (event.target === projectModal || event.target.closest('button')) {
+                projectModal.classList.remove('open');
+                document.body.style.overflow = 'auto'; // Restores scrolling
+            }
+        }
+    </script>
+</body>
+</html>
